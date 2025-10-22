@@ -1,0 +1,174 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elijah Mcdowell — Personal Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">
+        <div class="logo">EM</div>
+        <div>
+          <div class="name">Elijah Mcdowell</div>
+          <div class="sub">Virginia State University • Computer Science Student</div>
+        </div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li data-page="home" class="active">Home</li>
+        <li data-page="about">About</li>
+        <li data-page="resume">Resume</li>
+        <li data-page="projects">Projects</li>
+        <li data-page="organization">Organization</li>
+        <li data-page="contact">Contact</li>
+      </ul>
+    </nav>
+
+    <main id="app">
+      <!-- Home -->
+      <section id="home" class="page active">
+        <div class="hero">
+          <h1>Hi — I'm <span class="accent">Elijah</span></h1>
+          <p class="lead">Computer Science student at Virginia State University building clean, powerful web & software experiences.</p>
+          <div class="cta-row">
+            <a class="btn" data-page="projects">See Projects</a>
+            <a class="btn ghost" data-page="contact">Contact Me</a>
+          </div>
+        </div>
+        <div class="quick-grid">
+          <div class="card">
+            <h3>Tech Stack</h3>
+            <p>JavaScript • Python • React • Node • SQL</p>
+          </div>
+          <div class="card">
+            <h3>Interests</h3>
+            <p>Web apps, APIs, distributed systems, and cybersecurity.</p>
+          </div>
+          <div class="card">
+            <h3>Availability</h3>
+            <p>Open to internships & collaborations.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="page">
+        <h2>About Me</h2>
+        <div class="about-grid">
+          <div>
+            <p>Hello — I'm Elijah, a Computer Science student at <strong>Virginia State University</strong>. I enjoy turning complex problems into efficient, user-friendly solutions. My academic work and side projects focus on full-stack development, systems programming, and software design.</p>
+            <p>I like learning new tech stacks, contributing to student organizations, and building projects that solve real user needs.</p>
+          </div>
+          <div class="skills">
+            <h3>Skills</h3>
+            <ul>
+              <li>JavaScript (ES6+), HTML & CSS</li>
+              <li>React, Node.js, Express</li>
+              <li>Python, SQL, Git</li>
+              <li>Linux, Docker, REST APIs</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume -->
+      <section id="resume" class="page">
+        <h2>Resume</h2>
+        <div class="resume-grid">
+          <div class="resume-card">
+            <h3>Education</h3>
+            <p><strong>Virginia State University</strong> — B.S. Computer Science (expected)</p>
+            <p>Relevant coursework: Data Structures, Algorithms, Databases, Operating Systems.</p>
+          </div>
+          <div class="resume-card">
+            <h3>Experience</h3>
+            <p><strong>Student Developer — Campus App Project</strong> (Volunteer)</p>
+            <p>Built a prototype for a campus resource app using React and Firebase. Implemented authentication and scheduling features.</p>
+          </div>
+          <div class="resume-card">
+            <h3>Honors & Activities</h3>
+            <p>Member — Computer Science Club. Dean's List (semester).</p>
+          </div>
+        </div>
+
+        <div class="download-row">
+          <a class="btn" id="downloadResume" href="#">Download Resume (sample)</a>
+          <small class="muted">This is a sample resume; replace with your actual resume file if needed.</small>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="page">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <article class="project">
+            <h3>Campus Map App</h3>
+            <p>Interactive campus map with building info and routing. Built with React and Mapbox.</p>
+            <div class="tags">React • Mapbox • Firebase</div>
+          </article>
+          <article class="project">
+            <h3>Secure Notes</h3>
+            <p>Encrypted notes web app that stores encrypted content in the browser and syncs securely.</p>
+            <div class="tags">JavaScript • Crypto</div>
+          </article>
+          <article class="project">
+            <h3>Portfolio Generator</h3>
+            <p>CLI tool that scaffolds a personal portfolio site from a JSON profile.</p>
+            <div class="tags">Node • CLI</div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Organization -->
+      <section id="organization" class="page">
+        <h2>Organization</h2>
+        <p>Active in student groups and collaborative projects. Below are some roles and responsibilities:</p>
+        <ul class="org-list">
+          <li><strong>Computer Science Club</strong> — Project lead for workshop series.</li>
+          <li><strong>Hackathon Team</strong> — Built a 24-hour submission that won 'Best UX'.</li>
+          <li><strong>Volunteer Tutor</strong> — Help students in programming fundamentals.</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="page">
+        <h2>Contact Me</h2>
+        <p>Want to work together or have a question? Send a message.</p>
+        <form id="contactForm">
+          <label>Name<input name="name" type="text" placeholder="Your name" required></label>
+          <label>Email<input name="email" type="email" placeholder="you@example.com" required></label>
+          <label>Message<textarea name="message" rows="5" placeholder="Hi Elijah, ..." required></textarea></label>
+          <div class="form-row">
+            <button class="btn" type="submit">Send Message</button>
+            <button class="btn ghost" type="button" id="resetForm">Reset</button>
+          </div>
+          <p class="muted" id="formStatus"></p>
+        </form>
+        <div class="contact-cards">
+          <div class="card">
+            <h4>Email</h4>
+            <p>elijah@example.com</p>
+          </div>
+          <div class="card">
+            <h4>Location</h4>
+            <p>Petersburg, VA</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Elijah Mcdowell — Built with ❤️ & code</div>
+      <div class="footer-links">
+        <a href="#" data-page="about">About</a>
+        <a href="#" data-page="contact">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

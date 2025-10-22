@@ -1,0 +1,114 @@
+
+/* styles.css — Tech-looking dark theme */
+:root{
+  --bg:#0b0f14;
+  --panel:#0f1720;
+  --muted:#94a3b8;
+  --accent:#00e5ff;
+  --accent-2:#6c5ce7;
+  --glass: rgba(255,255,255,0.03);
+  --radius:14px;
+  --mono: 'Courier New', monospace;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:
+    radial-gradient(1000px 400px at 10% 10%, rgba(108,92,231,0.06), transparent 6%),
+    radial-gradient(1200px 500px at 90% 90%, rgba(0,229,255,0.03), transparent 6%),
+    var(--bg);
+  color:#e6eef6;
+  font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* Layout */
+.container{max-width:1100px;margin:28px auto;padding:22px}
+.nav{
+  display:flex;justify-content:space-between;align-items:center;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:14px;border-radius:12px;
+  box-shadow:0 6px 24px rgba(2,6,23,0.6), inset 0 1px rgba(255,255,255,0.02);
+}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{
+  width:56px;height:56px;border-radius:10px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  display:flex;align-items:center;justify-content:center;font-weight:700;
+  color:#021322;font-family:var(--mono);font-size:18px;
+  box-shadow:0 6px 18px rgba(108,92,231,0.15);
+}
+.name{font-weight:700}
+.sub{font-size:12px;color:var(--muted)}
+
+/* nav links */
+.nav-links{display:flex;gap:10px;list-style:none;margin:0;padding:0}
+.nav-links li{
+  padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600;
+  color:var(--muted);font-size:14px;
+}
+.nav-links li:hover{color:var(--accent)}
+.nav-links li.active{
+  color:#021322;background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  box-shadow:0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* main */
+main{margin-top:18px}
+.page{display:none;padding:18px;background:var(--panel);border-radius:12px;margin-bottom:14px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.page.active{display:block}
+
+/* Hero */
+.hero{display:flex;flex-direction:column;gap:10px}
+.hero h1{font-size:38px;margin:0;font-family:var(--mono)}
+.lead{color:var(--muted);max-width:720px}
+.accent{color:var(--accent)}
+
+/* quick grid */
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.card{background:var(--glass);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.card h3{margin:0 0 8px 0}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:2fr 1fr;gap:12px}
+.skills ul{margin:0;padding-left:18px;color:var(--muted)}
+
+/* resume cards */
+.resume-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.resume-card{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px}
+.download-row{margin-top:12px;display:flex;align-items:center;gap:12px}
+
+/* projects */
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.project{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+.tags{margin-top:8px;font-size:13px;color:var(--muted)}
+
+/* org list */
+.org-list{color:var(--muted);padding-left:18px}
+
+/* contact */
+form{display:flex;flex-direction:column;gap:10px;max-width:700px}
+label{display:flex;flex-direction:column;gap:6px;font-size:14px}
+input,textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;font-family:inherit}
+.form-row{display:flex;gap:8px}
+.contact-cards{display:flex;gap:12px;margin-top:12px}
+
+/* footer */
+.footer{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;padding:12px;margin-top:12px}
+
+/* buttons */
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021322;font-weight:700;text-decoration:none;cursor:pointer;border:none}
+.btn.ghost, .btn.ghost:visited{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+.muted{color:var(--muted);font-size:13px}
+
+/* responsive */
+@media (max-width:900px){
+  .quick-grid, .project-grid, .resume-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .nav{flex-direction:column;gap:12px;align-items:flex-start}
+}
