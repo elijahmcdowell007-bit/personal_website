@@ -1,12 +1,12 @@
-# *Name of Project*
+# Elijah's Personal Website 
 
-*Add a project description*
+*This project was created using Visual Studio Code. Its a website that is about me my major, the career i want to have in the future and what im doing to get there.
 
 The following features are implemented in the project:
 
-- [ ] Example
+- [ ] My Resume is shown
 
-- [ ] Example
+- [ ] Also my extracurriculars 
 
 ## Project Design:
 
